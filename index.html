@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WeGo · סוכנת וואטסאפ לקליניקות ועסקים עם תורים (הדמיה)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d2433;--muted:#5d6577;--bg:#fbf8f4;--card:#fff;--brand:#5b4bdb;--brand2:#7c6cf0;--warm:#ff8a5b;--wa:#25d366;--line:#ece6dd;--soft:#f3efff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Heebo,Arimo,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.ph{display:inline-block;background:#fff4d6;border:1px dashed #e0a800;color:#8a6500;font-size:12px;font-weight:700;padding:2px 8px;border-radius:6px}
+nav{position:sticky;top:0;z-index:20;background:rgba(251,248,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font-weight:900;font-size:26px;letter-spacing:-.5px}.logo span{color:var(--brand)}
+.links{display:flex;gap:22px;font-size:15px;color:var(--muted)}.links a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 24px;font-weight:700;text-decoration:none;font-size:16px;border:0;cursor:pointer;white-space:nowrap}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 24px rgba(37,211,102,.3)}
+.btn-pri{background:var(--brand);color:#fff}.btn-ghost{background:#fff;border:1.5px solid var(--ink);color:var(--ink)}
+.btn-sm{padding:10px 18px;font-size:14px}
+section{padding:84px 0}.eyebrow{color:var(--brand);font-weight:800;font-size:14px;letter-spacing:.5px}
+h1{font-size:52px;line-height:1.12;margin:12px 0 18px;font-weight:900;letter-spacing:-1px}
+h2{font-size:38px;line-height:1.2;margin:8px 0 14px;font-weight:900;letter-spacing:-.5px}
+h3{margin:0 0 6px;font-size:20px}.lead{font-size:19px;color:var(--muted);max-width:620px}
+.hero{padding:64px 0 72px;background:radial-gradient(900px 500px at 15% 10%,#efeaff 0,transparent 60%),radial-gradient(700px 400px at 90% 90%,#ffe9dd 0,transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 22px}
+.trust{display:flex;gap:18px;flex-wrap:wrap;list-style:none;padding:0;margin:0;color:var(--ink);font-weight:500;font-size:15px}
+.trust li:before{content:"✓";color:var(--wa);font-weight:900;margin-left:6px}
+.phone{width:330px;margin:0 auto;background:#111;border-radius:44px;padding:12px;box-shadow:0 30px 60px rgba(40,30,90,.25)}
+.screen{border-radius:34px;overflow:hidden;background:#e9e2d8}
+.wahead{background:#075e54;color:#fff;display:flex;gap:10px;align-items:center;padding:14px 16px}
+.av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--brand2),var(--warm));display:grid;place-items:center;font-weight:800}
+.wahead small{display:block;opacity:.8;font-size:12px}
+.chat{padding:14px 12px;display:flex;flex-direction:column;gap:8px;min-height:430px;font-size:14px}
+.m{max-width:82%;padding:8px 11px;border-radius:12px;box-shadow:0 1px 1px rgba(0,0,0,.08);line-height:1.45}
+.m time{display:block;font-size:10px;color:#7a7a7a;text-align:left;margin-top:2px}
+.in{background:#fff;align-self:flex-start;border-top-right-radius:2px}
+.out{background:#dcf8c6;align-self:flex-end;border-top-left-radius:2px}
+.sys{align-self:center;background:#fff3c4;font-size:12px;padding:5px 10px;border-radius:8px;color:#6b5600}
+.slot{display:inline-block;background:#eef;border-radius:8px;padding:2px 8px;margin:2px;font-weight:700;color:var(--brand)}
+.typing{align-self:flex-start;background:#fff;border-radius:12px;padding:10px 14px}
+.typing i{display:inline-block;width:6px;height:6px;margin:0 2px;border-radius:50%;background:#999;animation:b 1.2s infinite}.typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
+@keyframes b{0%,60%,100%{opacity:.3}30%{opacity:1}}
+.mock-note{text-align:center;font-size:12px;color:var(--muted);margin-top:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
+.demo{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.qbtns{display:flex;flex-direction:column;gap:10px;margin:18px 0}
+.qbtns button{font:inherit;text-align:right;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;font-weight:500}
+.qbtns button.on,.qbtns button:hover{border-color:var(--brand);background:var(--soft)}
+.answer{background:var(--soft);border-radius:18px;padding:22px;min-height:150px}
+.answer .who{font-weight:800;color:var(--brand);font-size:14px}
+.note{background:#fff7ec;border-right:4px solid var(--warm);padding:12px 16px;border-radius:8px;margin-top:14px;font-size:15px}
+.main-svc{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;background:linear-gradient(135deg,#2d2470,#5b4bdb);color:#fff;border-radius:28px;padding:48px}
+.main-svc .lead{color:#dcd7ff}.main-svc ul{padding:0;list-style:none;margin:0;display:grid;gap:12px}
+.main-svc li{background:rgba(255,255,255,.1);border-radius:14px;padding:14px 16px}.main-svc li b{display:block}
+.tag{display:inline-block;background:var(--warm);color:#fff;font-weight:800;font-size:13px;border-radius:999px;padding:4px 12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.svc h3{font-size:18px}.svc p{margin:0;color:var(--muted);font-size:15px}
+.case .row{display:grid;grid-template-columns:90px 1fr;gap:8px;padding:10px 0;border-top:1px solid var(--line);font-size:15px}
+.case .row b{color:var(--brand)}.case .k{font-size:13px;color:var(--muted);font-weight:700}
+.badge{font-size:12px;font-weight:700;background:#eef7f0;color:#1d7a43;border-radius:999px;padding:3px 10px}
+.badge.dev{background:#fff1e6;color:#b4581c}
+.sec-cta{margin-top:36px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;background:#fff;border:1px dashed #d8cff5;border-radius:18px;padding:18px}
+.offer{background:#fff;border:2px solid var(--warm);border-radius:28px;padding:44px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;position:relative}
+.seats{display:flex;gap:10px;margin:14px 0}.seat{width:54px;height:54px;border-radius:14px;border:2px dashed var(--warm);display:grid;place-items:center;font-weight:900;color:var(--warm)}
+.price{font-size:44px;font-weight:900}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.step:before{counter-increment:s;content:"0" counter(s);font-weight:900;color:var(--brand);font-size:28px;display:block}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.calc label{display:block;font-weight:700;margin:14px 0 6px}.calc input{width:100%;font:inherit;font-size:18px;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px}
+.result{background:var(--ink);color:#fff;border-radius:22px;padding:30px;display:flex;flex-direction:column;justify-content:center}
+.result .big{font-size:42px;font-weight:900;color:#ffd166}.result p{color:#c9cede}
+.founder{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
+.photo,.video{border-radius:24px;display:grid;place-items:center;text-align:center;color:var(--muted);font-weight:700;border:2px dashed #cfc6ea;background:repeating-linear-gradient(45deg,#f6f3ff,#f6f3ff 12px,#efeafd 12px,#efeafd 24px)}
+.photo{aspect-ratio:4/5}.video{aspect-ratio:16/9;margin-top:18px;position:relative}
+.play{width:64px;height:64px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:24px;margin:0 auto 8px}
+.testi{border:2px dashed #d6d0c4;background:#fffdf9}.testi .q{color:#a49c8e;font-size:40px;line-height:1}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:10px}
+.faq summary{font-weight:700;cursor:pointer;font-size:17px}.faq p{color:var(--muted);margin:10px 0 0}
+.final{background:linear-gradient(135deg,#ff8a5b,#ff6f91);color:#fff;border-radius:28px;padding:54px;text-align:center}
+.final .btn-ghost{background:transparent;color:#fff;border-color:#fff}
+footer{background:#161b26;color:#b9bfcc;padding:48px 0 28px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}footer a{color:#fff;text-decoration:none;display:block;margin:6px 0}
+.copy{grid-column:1/-1;border-top:1px solid #2b3242;padding-top:18px;margin-top:10px}
+.fab{position:fixed;bottom:22px;left:22px;z-index:50;background:var(--wa);color:#fff;border-radius:999px;padding:14px 20px;font-weight:800;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.25);display:flex;gap:8px;align-items:center}
+.banner{background:#1d2433;color:#fff;text-align:center;font-size:13px;padding:6px}
+.center{text-align:center}.center .lead{margin:0 auto}
+@media(max-width:900px){h1{font-size:34px}h2{font-size:28px}section{padding:56px 0}
+.hero .wrap,.demo,.main-svc,.offer,.calc,.founder,.grid2{grid-template-columns:1fr}.grid3,.steps{grid-template-columns:1fr}
+.links{display:none}.main-svc,.offer,.final{padding:28px}.phone{width:300px}.btn{white-space:normal}
+footer .wrap{grid-template-columns:1fr}.fab span{display:none}.fab{padding:16px}nav .btn{display:none}.price{font-size:32px}}
+</style>
+</head>
+<body>
+<div class="banner">הדמיה להצעת שיפור · טקסטים מסומנים בצהוב הם מקומות שמורים שצריך למלא</div>
+<nav><div class="wrap"><div class="logo">We<span>Go</span></div>
+<div class="links"><a href="#demo">הדגמה חיה</a><a href="#service">השירות</a><a href="#cases">פרויקטים</a><a href="#calc">מחשבון</a><a href="#about">עליי</a><a href="#faq">שאלות</a></div>
+<a class="btn btn-wa btn-sm" href="#">דברו עם חן</a></div></nav>
+
+<header class="hero"><div class="wrap">
+<div>
+<div class="eyebrow">סוכנת וואטסאפ לקליניקות ולעסקים שעובדים עם תורים</div>
+<h1>הקליניקה שלך עונה לכל פנייה בוואטסאפ תוך דקה, גם כשאת באמצע טיפול.</h1>
+<p class="lead">חן, סוכנת ה-AI שאני בונה, עונה ללקוחות, קובעת תורים ושולחת תזכורות. היא מעבירה אלייך רק את מה שצריך אותך, ולא מנחשת אף פעם: כשאין לה תשובה מאושרת, היא מעבירה אלייך.</p>
+<div class="ctas"><a class="btn btn-wa" href="#">דברו עכשיו עם חן בוואטסאפ ←</a><a class="btn btn-ghost" href="#contact">קבעו שיחת היכרות של 15 דקות</a></div>
+<ul class="trust"><li>מתחברת לוואטסאפ וליומן גוגל</li><li>בלי להחליף מערכות</li><li>מדברים ישירות עם מי שבונה</li></ul>
+</div>
+<div>
+<div class="phone"><div class="screen">
+<div class="wahead"><div class="av">ח</div><div><b>קליניקת [שם העסק]</b><small>חן · סוכנת AI · מקוונת</small></div></div>
+<div class="chat">
+<div class="m out">היי, אפשר לקבוע תור למחר?<time>21:47</time></div>
+<div class="m in">בטח! מחר יש מקום ב-<span class="slot">10:00</span> או ב-<span class="slot">14:30</span>. מה מתאים לך?<time>21:47</time></div>
+<div class="m out">14:30 מעולה 🙏<time>21:48</time></div>
+<div class="m in">קבעתי לך למחר ב-14:30 ✅ אשלח תזכורת בבוקר. אפשר לעזור במשהו נוסף?<time>21:48</time></div>
+<div class="m out">כמה עולה הטיפול?<time>21:48</time></div>
+<div class="m in">כדי שהמחיר יהיה מדויק, העברתי את השאלה לבעלת הקליניקה. היא תחזור אלייך בהקדם 😊<time>21:48</time></div>
+<div class="sys">🔔 השאלה הועברה לבעלת העסק</div>
+<div class="typing"><i></i><i></i><i></i></div>
+</div></div></div>
+<div class="mock-note">המחשה של שיחה</div>
+</div>
+</div></header>
+
+<section id="demo"><div class="wrap"><div class="demo">
+<div>
+<div class="eyebrow">הדגמה חיה</div>
+<h2>הכי קל להבין סוכן AI כשמדברים עם אחד</h2>
+<p class="lead">חן עונה רק מתוך מידע שהגדרתי לה, יודעת מתי להעביר את השיחה, ושותקת כשאני נכנסת לשיחה. ואם תשאלו אם היא בוט, היא תגיד את האמת.</p>
+<div class="qbtns" id="q">
+<button class="on" data-a="בטח. מחר יש מקום ב-10:00 או ב-14:30. מה מתאים לך?">אפשר לקבוע תור למחר?</button>
+<button data-a="כדי שהמחיר יהיה מדויק, העברתי את השאלה לבעלת הקליניקה. היא תחזור אליך בהקדם.">כמה עולה טיפול?</button>
+<button data-a="כן, אני סוכנת AI. אם תרצו לדבר עם אדם, אעביר אתכם מיד.">את בוט?</button>
+</div>
+</div>
+<div class="card">
+<div class="answer"><div class="who">חן עונה:</div><p id="ans" style="font-size:19px;margin:8px 0 0">בטח. מחר יש מקום ב-10:00 או ב-14:30. מה מתאים לך?</p></div>
+<div class="note"><b>שימו לב לשאלה על המחיר.</b> כשאין לחן תשובה מאושרת, היא לא מנחשת. היא מעבירה לבעלת העסק.</div>
+<div class="ctas" style="margin-bottom:0"><a class="btn btn-wa" href="#">נסו אותה בוואטסאפ האמיתי ←</a></div>
+</div>
+</div></div></section>
+
+<section id="service" style="padding-top:20px"><div class="wrap">
+<div class="main-svc">
+<div><span class="tag">השירות המרכזי</span>
+<h2>סוכנת וואטסאפ שמטפלת בפניות ובתורים</h2>
+<p class="lead">כל פנייה מקבלת תשובה מיד, התור נכנס ליומן, התזכורת יוצאת לבד, ואת מקבלת רק את מה שבאמת צריך אותך.</p>
+<div class="ctas"><a class="btn btn-wa" href="#">דברו עם חן ←</a><a class="btn btn-ghost" style="background:transparent;color:#fff;border-color:#fff" href="#contact">שיחת היכרות</a></div></div>
+<ul>
+<li><b>עונה תוך דקה, 24/7</b>שאלות חוזרות, שעות, כתובת, הכנה לטיפול. רק ממידע שאישרת.</li>
+<li><b>קובעת ומזיזה תורים ביומן גוגל</b>מציעה שעות פנויות ומאשרת מול הלקוח.</li>
+<li><b>תזכורות ואישורי הגעה</b>פחות תורים שנשכחים ברגע האחרון.</li>
+<li><b>מעבירה אלייך עם התראה</b>מחירים, מקרים רגישים וכל מה שאין לה עליו תשובה.</li>
+</ul>
+</div>
+<h3 style="margin:44px 0 16px;font-size:22px">ועוד מה שאני בונה לעסקים</h3>
+<div class="grid3">
+<div class="card svc"><h3>אוטומציות</h3><p>תזכורות, הודעות מעקב, דוחות והעברת מידע בין מערכות.</p></div>
+<div class="card svc"><h3>מערכת CRM</h3><p>כל הלקוחות, הפניות וההיסטוריה במקום אחד, עם תזכורות למעקב.</p></div>
+<div class="card svc"><h3>דשבורד מנכ״ל</h3><p>המספרים שחשובים לכם, מתעדכנים לבד, גם מהטלפון.</p></div>
+<div class="card svc"><h3>סוכני AI לעבודה פעילה</h3><p>מעבדים פניות, מעדכנים רשומות ומכינים טיוטות לפי הכללים שלכם.</p></div>
+<div class="card svc"><h3>מערכות בהתאמה אישית</h3><p>מלאי והזמנות, השכרות, אירועים. כשמוצר מדף לא מתאים.</p></div>
+<div class="card svc"><h3>בוטים לאתר ולרשתות</h3><p>אותו היגיון של חן, גם באתר ובאינסטגרם.</p></div>
+</div>
+</div></section>
+
+<section id="cases" style="background:#fff"><div class="wrap">
+<div class="center"><div class="eyebrow">פרויקטים</div><h2>מערכות שכבר עובדות</h2><p class="lead">מה הייתה הבעיה, מה נבנה, ומה השתנה בעבודה היומיומית.</p></div>
+<div class="grid2" style="margin-top:36px">
+<div class="card case"><span class="badge">פעיל</span><h3 style="margin-top:10px">חן · הסוכנת של WeGo</h3>
+<div class="row"><span class="k">הבעיה</span><span>פניות בוואטסאפ בזמן שאני באמצע פיתוח.</span></div>
+<div class="row"><span class="k">מה נבנה</span><span>סוכנת AI שעונה ממידע מאושר, מסננת ומעבירה אליי עם התראה.</span></div>
+<div class="row"><span class="k">מה השתנה</span><span><b>כל פנייה מקבלת מענה, ואני נכנסת רק כשצריך אותי.</b></span></div></div>
+<div class="card case"><span class="badge">פעיל</span><h3 style="margin-top:10px">ONETAX · החזרי מס</h3>
+<div class="row"><span class="k">הבעיה</span><span>לידים מגיעים בלי סינון, וקשה לדעת מי זכאי.</span></div>
+<div class="row"><span class="k">מה נבנה</span><span>פלטפורמת קליטת לידים עם טופס לסינון זכאות וחיבור ל-CRM.</span></div>
+<div class="row"><span class="k">מה השתנה</span><span><b>כל ליד נכנס ל-CRM מסונן ועם הפרטים, מוכן לטיפול.</b></span></div></div>
+<div class="card case"><span class="badge">פעיל</span><h3 style="margin-top:10px">רמות על גלגלים · השכרת אופניים חשמליים</h3>
+<div class="row"><span class="k">הבעיה</span><span>טפסי נייר ומעקב ידני אחרי מה מושכר ומה פנוי.</span></div>
+<div class="row"><span class="k">מה נבנה</span><span>מערכת השכרה עם חתימה דיגיטלית ומלאי בזמן אמת.</span></div>
+<div class="row"><span class="k">מה השתנה</span><span><b>הלקוח חותם בטלפון, והמלאי מתעדכן לבד.</b></span></div></div>
+<div class="card case"><span class="badge">פעיל</span><h3 style="margin-top:10px">נעלי קנגרו · רשת אופנה</h3>
+<div class="row"><span class="k">הבעיה</span><span>מלאי והזמנות שמנוהלים בכמה מקומות.</span></div>
+<div class="row"><span class="k">מה נבנה</span><span>מערכת לניהול מלאי והזמנות.</span></div>
+<div class="row"><span class="k">מה השתנה</span><span><b>תמונה אחת ומעודכנת של המלאי וההזמנות.</b></span></div></div>
+</div>
+<div class="card" style="margin-top:20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap"><span class="badge dev">בפיתוח</span><b>EGATI</b><span style="color:var(--muted)">ניהול אירועים, אישורי הגעה ודיוור בוואטסאפ ובמייל.</span></div>
+<p class="center" style="color:var(--muted);font-size:14px"><span class="ph">להשלמה</span> מומלץ להוסיף צילום מסך אמיתי לכל פרויקט, ומספרים רק אם הם מדודים ומאושרים ע"י הלקוח.</p>
+<div class="sec-cta"><b>יש לכם תהליך דומה?</b><a class="btn btn-pri btn-sm" href="#contact">בואו נבדוק מה אפשר לבנות</a></div>
+</div></section>
+
+<section id="offer"><div class="wrap"><div class="offer">
+<div><span class="tag">מחיר השקה</span>
+<h2>3 קליניקות ראשונות: הקמה במחיר השקה</h2>
+<p class="lead">אני בונה עכשיו את 3 המקרים הראשונים. בתמורה אבקש מכם חוות דעת כנה, מה עבד ומה פחות.</p>
+<div class="seats"><div class="seat">1</div><div class="seat">2</div><div class="seat">3</div></div>
+</div>
+<div class="card center"><div style="color:var(--muted)">סוכנת וואטסאפ בסיסית</div>
+<div class="price">מ-[מחיר] ₪</div><span class="ph">מחיר לקביעה ע"י ברכי</span>
+<div style="margin-top:18px"><a class="btn btn-wa" href="#">אני רוצה להיות אחת מהשלוש ←</a></div></div>
+</div></div></section>
+
+<section style="background:#fff"><div class="wrap">
+<div class="center"><div class="eyebrow">התהליך</div><h2>מהשיחה הראשונה ועד מערכת שעובדת</h2></div>
+<div class="steps" style="margin-top:32px">
+<div class="card step"><h3>שיחת היכרות</h3><p style="color:var(--muted);margin:0">מספרים מה גוזל לכם זמן. בלי עלות.</p></div>
+<div class="card step"><h3>אפיון והצעה</h3><p style="color:var(--muted);margin:0">היקף, לוח זמנים ומחיר ברורים לפני שמתחילים.</p></div>
+<div class="card step"><h3>בנייה וחיבור</h3><p style="color:var(--muted);margin:0">מחברת למה שכבר עובד ובודקת על מקרים אמיתיים.</p></div>
+<div class="card step"><h3>הטמעה וליווי</h3><p style="color:var(--muted);margin:0">מסבירה לצוות ונשארת זמינה לשינויים.</p></div>
+</div>
+<div class="sec-cta"><b>הצעד הראשון לוקח 15 דקות.</b><a class="btn btn-pri btn-sm" href="#contact">קבעו שיחת היכרות</a></div>
+</div></section>
+
+<section id="calc"><div class="wrap">
+<div class="center"><div class="eyebrow">מחשבון</div><h2>כמה זמן הולך אצלכם על עבודה ידנית?</h2><p class="lead">שלושה מספרים, ותראו כמה עולה לעסק העבודה שחוזרת על עצמה.</p></div>
+<div class="calc" style="margin-top:32px">
+<div class="card">
+<label>כמה פניות ושאלות חוזרות ביום?</label><input id="a" type="number" value="20">
+<label>כמה דקות לוקחת כל אחת בממוצע?</label><input id="b" type="number" value="5">
+<label>כמה שווה שעת עבודה שלכם (₪)?</label><input id="c" type="number" value="60">
+</div>
+<div class="result">
+<div>זה יוצא בערך</div><div class="big"><span id="h"></span> שעות בחודש</div>
+<div>ו-<b id="y" style="font-size:24px;color:#ffd166"></b> ₪ בשנה.</div>
+<p>החישוב מבוסס רק על המספרים שהזנתם (26 ימי עבודה בחודש).</p>
+<a class="btn btn-wa" href="#">רוצים לבדוק כמה מזה אפשר להעביר לחן? בדיקה חינם של 15 דקות ←</a>
+</div></div>
+</div></section>
+
+<section id="about" style="background:#fff"><div class="wrap"><div class="founder">
+<div class="photo"><div>📷<br>תמונה של ברכי<br><span class="ph">מקום שמור לתמונה</span></div></div>
+<div><div class="eyebrow">מי בונה</div><h2>נעים מאוד, אני ברכי</h2>
+<p class="lead">מפתחת Full-Stack ומייסדת WeGo. אני בונה מערכות לעסקים מהאפיון ועד ההטמעה, ובכל פרויקט מתחילה מאותה שאלה: מה באמת גוזל לכם זמן. כשעובדים עם WeGo, מדברים ישירות עם מי שבונה.</p>
+<div class="video"><div><div class="play">▶</div>ברכי מראה מערכת עובדת ב-30 שניות<br><span class="ph">מקום שמור לסרטון</span></div></div>
+<div class="ctas"><a class="btn btn-pri" href="#contact">דברו איתי ישירות</a><a class="btn btn-ghost" href="#">לינקדאין</a></div>
+</div></div></div></section>
+
+<section><div class="wrap">
+<div class="center"><div class="eyebrow">חוות דעת</div><h2>מה אומרים הלקוחות</h2><p><span class="ph">כאן יופיעו חוות דעת אמיתיות</span></p></div>
+<div class="grid3" style="margin-top:28px">
+<div class="card testi"><div class="q">”</div><p style="color:#a49c8e">כאן יופיעו חוות דעת אמיתיות של לקוחות, עם שם, עסק ותמונה (באישורם).</p><span class="ph">מקום שמור</span></div>
+<div class="card testi"><div class="q">”</div><p style="color:#a49c8e">כאן יופיעו חוות דעת אמיתיות. אפשר גם צילום מסך מוואטסאפ, באישור הלקוח.</p><span class="ph">מקום שמור</span></div>
+<div class="card testi"><div class="q">”</div><p style="color:#a49c8e">כאן יופיעו חוות דעת אמיתיות מ-3 קליניקות ההשקה.</p><span class="ph">מקום שמור</span></div>
+</div></div></section>
+
+<section id="faq" style="background:#fff"><div class="wrap" style="max-width:860px">
+<div class="center"><div class="eyebrow">שאלות נפוצות</div><h2>לכל השאלות</h2></div>
+<div class="faq" style="margin-top:28px">
+<details open><summary>כמה עולה סוכן AI או אוטומציה לעסק?</summary><p>המחיר תלוי בהיקף: כמה ערוצים, כמה פעולות ואילו מערכות צריך לחבר. לקליניקות יש מחיר השקה שמתחיל מ-[מחיר] ₪, ואחרי שיחת ההיכרות מקבלים הצעה מפורטת.</p></details>
+<details><summary>מה ההבדל בין בוט לסוכן AI?</summary><p>בוט עובד לפי תסריט קבוע. סוכן AI מבין שפה חופשית, מחליט מה לעשות ומבצע פעולות, כמו קביעת תור ביומן.</p></details>
+<details><summary>סוכן AI יכול להמציא תשובות?</summary><p>סוכן שבנוי נכון עונה רק מתוך מידע שהגדרתם, ומעביר אליכם כשאין לו תשובה. כך בניתי את חן.</p></details>
+<details><summary>המספר שלי בוואטסאפ עלול להיחסם?</summary><p>יש חיבור דרך הפלטפורמה העסקית הרשמית של מטא, וחיבור לחשבון קיים. בחיבור הלא רשמי יש סיכון לחסימה. אני מסבירה את ההבדלים לפני שבוחרים.</p></details>
+<details><summary>צריך להחליף את המערכות שיש לי?</summary><p>ברוב המקרים לא. מחברים לוואטסאפ, יומן גוגל, גוגל שיטס או CRM קיים.</p></details>
+<details><summary>איך מתחילים?</summary><p>שולחים הודעה בוואטסאפ או בטופס, ובשיחת היכרות קצרה מבינים מה הכי כדאי לעשות קודם.</p></details>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="final">
+<h2>בואו נמצא את הדבר הראשון שאפשר להעביר לחן</h2>
+<p style="font-size:19px;opacity:.95">ספרו לי בכמה מילים מה קורה אצלכם, ואחזור אליכם.</p>
+<div class="ctas" style="justify-content:center"><a class="btn btn-wa" href="#">דברו עכשיו עם חן בוואטסאפ ←</a><a class="btn btn-ghost" href="#">קבעו שיחת היכרות של 15 דקות</a></div>
+</div></div></section>
+
+<footer><div class="wrap">
+<div><div class="logo" style="color:#fff">We<span>Go</span></div><p>סטודיו של ברכי אביני: סוכני AI, אוטומציות, CRM, דשבורד מנכ״ל ומערכות בהתאמה אישית.</p></div>
+<div><b style="color:#fff">עקבו</b><a href="#">LinkedIn <span class="ph">קישור</span></a><a href="#">Instagram <span class="ph">קישור</span></a><a href="#">וואטסאפ</a></div>
+<div><b style="color:#fff">מידע</b><a href="#">הצהרת נגישות</a><a href="#">מדיניות פרטיות</a><a href="#">תנאי שימוש</a></div>
+<div class="copy">© 2026 WeGo · כל הזכויות שמורות</div>
+</div></footer>
+
+<a class="fab" href="#" aria-label="וואטסאפ">💬 <span>דברו עם חן</span></a>
+<script>
+document.querySelectorAll('#q button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#q button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('ans').textContent=b.dataset.a});
+function calc(){const a=+document.getElementById('a').value,b=+document.getElementById('b').value,c=+document.getElementById('c').value;const h=a*b*26/60;document.getElementById('h').textContent=Math.round(h);document.getElementById('y').textContent=Math.round(h*c*12).toLocaleString('he-IL')}
+['a','b','c'].forEach(i=>document.getElementById(i).oninput=calc);calc();
+</script>
+</body></html>
